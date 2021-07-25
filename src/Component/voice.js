@@ -4,7 +4,7 @@ import SpeechRecognition, {
 } from "react-speech-recognition";
 import { Row, Col, Button } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMicrophone, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faMicrophone } from "@fortawesome/free-solid-svg-icons";
 
 const Voice = () => {
   const {
@@ -34,7 +34,6 @@ const Voice = () => {
               onClick={SpeechRecognition.startListening}
               style={{
                 marginRight: "10px",
-                color: "red",
                 cursor: "pointer",
                 color: listening ? "red" : "",
               }}
