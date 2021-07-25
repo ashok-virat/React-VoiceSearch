@@ -20,7 +20,6 @@ const Voice = () => {
 
   return (
     <div className="container-fluid">
-      <i class="fas fa-microphone-alt"></i>
       <Row>
         <Col md="12" className="text-center">
           <h2>Voice Search</h2>
