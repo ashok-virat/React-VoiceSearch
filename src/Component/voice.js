@@ -41,19 +41,19 @@ const Voice = () => {
           </span>
         </Col>
       </Row>
-      <Row className="mt-3">
+      <Row className="mt-3 text-center">
         <Col md="4">
           <Row>
             <Col md="8"></Col>
             <Col md="2">
               <Button
-                className="btn-danger btn-sm"
+                className="btn-danger btn-sm mt-2"
                 onClick={SpeechRecognition.stopListening}
               >
                 Stop
               </Button>
             </Col>
-            <Col md="2">
+            <Col md="2" className="mt-2">
               <Button className="btn-warning btn-sm" onClick={resetTranscript}>
                 Reset
               </Button>
