@@ -2,7 +2,15 @@ import React from "react";
 import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
-import { Row, Col, Button } from "reactstrap";
+import {
+  Row,
+  Col,
+  Button,
+  InputGroup,
+  InputGroupAddon,
+  InputGroupText,
+  Input,
+} from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMicrophone } from "@fortawesome/free-solid-svg-icons";
 
@@ -27,18 +35,28 @@ const Voice = () => {
       </Row>
       <Row className="mt-2">
         <Col md="4" className="mr-3 ml-3">
-          <span className="input-group-text">
-            <FontAwesomeIcon
-              icon={faMicrophone}
-              onClick={SpeechRecognition.startListening}
-              style={{
-                marginRight: "10px",
-                cursor: "pointer",
-                color: listening ? "red" : "",
-              }}
+          <InputGroup>
+            <InputGroupAddon addonType="prepend">
+              <InputGroupText
+                style={{ backgroundColor: "white", padding: "10px" }}
+              >
+                {" "}
+                <FontAwesomeIcon
+                  icon={faMicrophone}
+                  onClick={SpeechRecognition.startListening}
+                  style={{
+                    cursor: "pointer",
+                    color: listening ? "red" : "",
+                  }}
+                />
+              </InputGroupText>
+            </InputGroupAddon>
+            <Input
+              placeholder="Voice Search Only..."
+              defaultValue={transcript}
+              style={{ borderLeft: "none" }}
             />
-            <span className="text-center"> {transcript}</span>
-          </span>
+          </InputGroup>
         </Col>
       </Row>
       <Row className="mt-3 text-center">
