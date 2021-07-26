@@ -90,7 +90,7 @@ const Voice = () => {
   return (
     <div className="container-fluid">
       <Row>
-        <Col md="12" className="text-center">
+        <Col md="12" className="text-center mt-3">
           <h2>Voice Search</h2>
         </Col>
       </Row>
