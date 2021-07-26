@@ -1,5 +1,4 @@
 import "./App.css";
-import Voice from "./Component/voice";
 import { Fruits } from "./Component/fruits";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
